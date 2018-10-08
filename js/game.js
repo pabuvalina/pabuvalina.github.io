@@ -7,24 +7,19 @@ var flappy_hse_bg = new Image();
 var flappy_hse_fg = new Image();
 var flappy_hse_pipeUp = new Image();
 var flappy_hse_pipeBottom = new Image();
-var iconbig = new Image();
 
 flappy_hse_logo.src = "img/flappy_hse_logo.png";
 flappy_hse_bg.src = "img/flappy_hse_bg.png";
 flappy_hse_fg.src = "img/flappy_hse_fg.png";
 flappy_hse_pipeUp.src = "img/flappy_hse_pipeUp.png";
 flappy_hse_pipeBottom.src = "img/flappy_hse_pipeBottom.png";
-iconbig.src = "img/iconbig.png";
 
 // аудио
 var fly = new Audio();
 var score_audio = new Audio();
-var gameover = new Audio();
 
 fly.src = "audio/fly.mp3";
 score_audio.src = "audio/score.mp3";
-gameover.src = "gameover.mp3";
-
 
 // зазор между блоками
 var gap = 90;
@@ -73,7 +68,7 @@ function draw() {
    || yPos + flappy_hse_logo.height >= pipe [i].y + flappy_hse_pipeUp.height + gap)
    || yPos + flappy_hse_logo.height >= cvs.height - flappy_hse_fg.height) {
      location.reload();
-   } // пролезает ли птичка в проход, если нет - остановка
+   } // пролезает ли птичка в проход, если нет - перезапуск игры
 
 
       if(pipe[i].x == 5) {
